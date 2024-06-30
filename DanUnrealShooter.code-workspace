@@ -1,0 +1,613 @@
+{
+	"folders": [
+		{
+			"name": "DanUnrealShooter",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "DanUnrealShooter Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Debug",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Debug",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooter Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Debug",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"DebugGame",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"DebugGame",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooter Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"DebugGame",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Development",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Development",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooter Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Development",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Test",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Test",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooter Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Test",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Shipping",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Shipping",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooter Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooter Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooter",
+					"Win64",
+					"Shipping",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"Debug",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"Debug",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooterEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"Debug",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"DebugGame",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"DebugGame",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooterEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"DebugGame",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"Development",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"Development",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"DanUnrealShooterEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"label": "DanUnrealShooterEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"DanUnrealShooterEditor",
+					"Win64",
+					"Development",
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch DanUnrealShooter (Debug)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"preLaunchTask": "DanUnrealShooter Win64 Debug Build",
+				"args": [
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch DanUnrealShooter (DebugGame)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"preLaunchTask": "DanUnrealShooter Win64 DebugGame Build",
+				"args": [
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch DanUnrealShooter (Development)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Binaries\\Win64\\UnrealGame.exe",
+				"preLaunchTask": "DanUnrealShooter Win64 Development Build",
+				"args": [
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch DanUnrealShooter (Test)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"preLaunchTask": "DanUnrealShooter Win64 Test Build",
+				"args": [
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch DanUnrealShooter (Shipping)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"preLaunchTask": "DanUnrealShooter Win64 Shipping Build",
+				"args": [
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch DanUnrealShooterEditor (Debug)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+				"preLaunchTask": "DanUnrealShooterEditor Win64 Debug Build",
+				"args": [
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject"
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch DanUnrealShooterEditor (DebugGame)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+				"preLaunchTask": "DanUnrealShooterEditor Win64 DebugGame Build",
+				"args": [
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject"
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Launch DanUnrealShooterEditor (Development)",
+				"request": "launch",
+				"program": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+				"preLaunchTask": "DanUnrealShooterEditor Win64 Development Build",
+				"args": [
+					"C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject"
+				],
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4",
+				"stopAtEntry": false,
+				"console": "integratedTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
+				"program": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\DanUnrealShooter.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "integratedTerminal",
+				"stopAtEntry": false,
+				"cwd": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4"
+			}
+		]
+	}
+}

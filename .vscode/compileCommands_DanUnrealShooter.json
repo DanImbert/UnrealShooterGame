@@ -1,0 +1,58 @@
+[
+	{
+		"file": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Source\\DanUnrealShooter\\DanUnrealShooter.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\.vscode\\compileCommands_DanUnrealShooter\\DanUnrealShooter.1.rsp"
+		],
+		"directory": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Source\\DanUnrealShooter\\DanUnrealShooter.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\.vscode\\compileCommands_DanUnrealShooter\\DanUnrealShooter.1.rsp"
+		],
+		"directory": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Source\\DanUnrealShooter\\DanUnrealShooter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\.vscode\\compileCommands_DanUnrealShooter\\DanUnrealShooter.1.rsp"
+		],
+		"directory": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Source\\DanUnrealShooter\\MyPawn.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\.vscode\\compileCommands_DanUnrealShooter\\DanUnrealShooter.1.rsp"
+		],
+		"directory": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Source\\DanUnrealShooter\\MyPawn.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\.vscode\\compileCommands_DanUnrealShooter\\DanUnrealShooter.1.rsp"
+		],
+		"directory": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Source\\DanUnrealShooter\\ShooterCharacter.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\.vscode\\compileCommands_DanUnrealShooter\\DanUnrealShooter.1.rsp"
+		],
+		"directory": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\Source\\DanUnrealShooter\\ShooterCharacter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Daniel\\Documents\\Unreal Projects\\UnrealFPSGame\\.vscode\\compileCommands_DanUnrealShooter\\DanUnrealShooter.1.rsp"
+		],
+		"directory": "C:\\Users\\Daniel\\UnrealEditors\\UE_5.4\\Engine\\Source"
+	}
+]
