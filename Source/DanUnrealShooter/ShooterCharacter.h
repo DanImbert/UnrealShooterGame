@@ -35,4 +35,20 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Movement functions
+    void MoveForward(float Value);
+    void MoveRight(float Value);
+
+    // Look functions
+    void LookUp(float Value);
+    void Turn(float Value);
+
+    // Jumping
+    void StartJump();
+    void StopJump();
+
+private:
+    
+    bool bIsJumping;
+
 };
