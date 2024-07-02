@@ -4,6 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "InputMappingContext.h" // Include for UInputMappingContext
+#include "EnhancedInputComponent.h" // Include for UEnhancedInputComponent
+#include "InputAction.h" // Include for UInputAction
+#include "EnhancedInputSubSystems.h"
 #include "ShooterCharacter.generated.h"
 
 UCLASS()
@@ -14,6 +18,32 @@ class DANUNREALSHOOTER_API AShooterCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AShooterCharacter();
+
+	//Enhanced Input
+
+	UPROPERTY(EditAnywhere, Category = "Input")
+	UInputMappingContext* InputMappingContext;
+ 
+	UPROPERTY(EditAnywhere, Category = "Input")
+        UInputAction* MoveAction;
+	
+	UPROPERTY(EditAnywhere, Category = "Input")
+        UInputAction* LookAction;
+	
+	UPROPERTY(EditAnywhere, Category = "Input")
+        UInputAction* LookGamepadAction;
+	
+	UPROPERTY(EditAnywhere, Category = "Input")
+        UInputAction* JumpAction;
+ 
+	UPROPERTY(EditAnywhere, Category = "Input")
+	float LookRate = 70.f;
+ 
+	void Move(const FInputActionValue& Value);
+	void Look(const FInputActionValue& Value);
+	void LookGamepad(const FInputActionValue& Value);
+
+	// End Enhanced Input
 
 protected:
 	// Called when the game starts or when spawned

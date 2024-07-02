@@ -3,11 +3,13 @@
 
 #include "ShooterCharacter.h"
 
+
 // Sets default values
 AShooterCharacter::AShooterCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
 
 }
 
@@ -35,6 +37,29 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AShooterCharacter::MoveRight);
 	PlayerInputComponent->BindAxis(TEXT("LookRight"), this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
+
+	//Enhanced Input
+	
+	// Get the player controller
+    APlayerController *PlayerController = Cast<APlayerController>(Controller);
+
+	 // Get the local player subsystem
+    UEnhancedInputLocalPlayerSubsystem *Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer());
+    // Clear out existing mapping, and add our mapping
+    Subsystem->ClearAllMappings();
+    Subsystem->AddMappingContext(InputMappingContext, 0);
+ 
+    UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent);
+ 
+    
+ 
+    EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AShooterCharacter::Move);
+    EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AShooterCharacter::Look);
+    EnhancedInputComponent->BindAction(LookGamepadAction, ETriggerEvent::Triggered, this, &AShooterCharacter::LookGamepad);
+    EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ACharacter::Jump);
+
+	
+
 }
 
 void AShooterCharacter::MoveForward(float AxisValue) 
@@ -52,3 +77,27 @@ void AShooterCharacter::MoveRight(float AxisValue)
 // 	AddControllerPitchInput(AxisValue);	
 // }
 
+void AShooterCharacter::Move(const FInputActionValue& Value)
+{
+    const FVector2D MoveVector = Value.Get<FVector2D>();
+    const FVector ForwardVector = GetActorForwardVector();
+    const FVector RightVector = GetActorRightVector();
+ 
+    AddMovementInput(ForwardVector, MoveVector.Y);
+    AddMovementInput(RightVector, MoveVector.X);
+}
+ 
+void AShooterCharacter::Look(const FInputActionValue& Value) {
+    const FVector2D LookAxisVector = Value.Get<FVector2D>();
+ 
+    AddControllerYawInput(LookAxisVector.X);
+    AddControllerPitchInput(LookAxisVector.Y);
+}
+ 
+void AShooterCharacter::LookGamepad(const FInputActionValue& Value) {
+    const FVector2D LookAxisVector = Value.Get<FVector2D>();
+    float deltaTime = GetWorld()->GetDeltaSeconds();
+ 
+    AddControllerPitchInput(LookAxisVector.Y*LookRate * deltaTime);
+    AddControllerYawInput(LookAxisVector.X*LookRate * deltaTime);
+}
