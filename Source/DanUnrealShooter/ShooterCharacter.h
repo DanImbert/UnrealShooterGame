@@ -10,6 +10,9 @@
 #include "EnhancedInputSubsystems.h" // Corrected from EnhancedInputSubSystems to EnhancedInputSubsystems
 #include "ShooterCharacter.generated.h"
 
+
+class AGun;
+
 UCLASS()
 class DANUNREALSHOOTER_API AShooterCharacter : public ACharacter
 {
@@ -18,6 +21,9 @@ class DANUNREALSHOOTER_API AShooterCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AShooterCharacter();
+
+	
+
 
 	// Enhanced Input
 	UPROPERTY(EditAnywhere, Category = "Input")
@@ -52,6 +58,17 @@ public:
 private:
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
+
+	UPROPERTY(EditAnywhere)
+	float RotationRate = 10;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AGun> GunClass;
+
+	UPROPERTY()
+	AGun* Gun;
+
+	//Enhanced Input
 
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
