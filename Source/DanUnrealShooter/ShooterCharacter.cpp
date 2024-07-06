@@ -58,6 +58,7 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
         EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AShooterCharacter::Look);
         EnhancedInputComponent->BindAction(LookGamepadAction, ETriggerEvent::Triggered, this, &AShooterCharacter::LookGamepad);
         EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ACharacter::Jump);
+       // EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Triggered, this, &ACharacter::ShootEI);
     }
 
     // Legacy Input setup
@@ -84,6 +85,9 @@ void AShooterCharacter::MoveRight(float AxisValue)
 {
     AddMovementInput(GetActorRightVector() * AxisValue);
 }
+
+
+//Enhanced Input
 
 void AShooterCharacter::Move(const FInputActionValue& Value)
 {
@@ -114,4 +118,9 @@ void AShooterCharacter::LookGamepad(const FInputActionValue& Value)
         AddControllerYawInput(LookAxisVector.X * LookRate * DeltaTime);
         AddControllerPitchInput(LookAxisVector.Y * LookRate * DeltaTime);
     }
+}
+
+void AShooterCharacter::ShootEI()
+{
+    
 }

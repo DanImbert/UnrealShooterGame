@@ -22,7 +22,7 @@ AGun::AGun()
 
 void AGun::PullTrigger() 
 {
-	UE_LOG(LogTemp, Warning, TEXT("You've been shot!"));
+	UGameplayStatics::SpawnEmitterAttached(MuzzleFlash, Mesh, TEXT("MuzzleFlashSocket"));
 }
 
 

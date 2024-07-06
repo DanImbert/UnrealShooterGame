@@ -40,6 +40,9 @@ public:
 	
 	UPROPERTY(EditAnywhere, Category = "Input")
 	UInputAction* JumpAction;
+
+	UPROPERTY(EditAnywhere, Category = "Input")
+	UInputAction* ShootAction;
  
 	UPROPERTY(EditAnywhere, Category = "Input")
 	float LookRate = 70.f;
@@ -76,4 +79,5 @@ private:
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void LookGamepad(const FInputActionValue& Value);
+	void ShootEI();
 };
