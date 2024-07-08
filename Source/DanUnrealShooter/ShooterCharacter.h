@@ -22,7 +22,7 @@ public:
 	// Sets default values for this character's properties
 	AShooterCharacter();
 
-	
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const &DamageEvent, class AController *EventInstigator, AActor *DamageCauser) override;
 
 
 	// Enhanced Input
@@ -46,6 +46,12 @@ public:
  
 	UPROPERTY(EditAnywhere, Category = "Input")
 	float LookRate = 70.f;
+
+	UPROPERTY(EditDefaultsOnly)
+	float MaxHealth = 100;
+
+	UPROPERTY(VisibleAnywhere)
+	float Health;
 
 protected:
 	// Called when the game starts or when spawned
