@@ -70,6 +70,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void Shoot();
+	void ShootEI();
 
 private:
 	void MoveForward(float AxisValue);
@@ -92,5 +93,5 @@ private:
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void LookGamepad(const FInputActionValue& Value);
-	void ShootEI();
+	
 };
