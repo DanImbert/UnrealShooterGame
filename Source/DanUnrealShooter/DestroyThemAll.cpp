@@ -2,6 +2,10 @@
 
 
 #include "DestroyThemAll.h"
+#include "EngineUtils.h"
+#include "GameFramework/Controller.h"
+#include "ShooterAIController.h"
+
 
 void ADestroyThemAll::PawnKilled(APawn* PawnKilled) 
 {
@@ -10,9 +14,20 @@ void ADestroyThemAll::PawnKilled(APawn* PawnKilled)
     APlayerController* PlayerController = Cast<APlayerController>(PawnKilled->GetController());
     if (PlayerController != nullptr)
     {
-        PlayerController->GameHasEnded(nullptr, false);
+        EndGame(false); 
     }
 
 }
+
+
+void ADestroyThemAll::EndGame(bool bIsPlayerWinner) 
+{
+    for (AController* Controller : TActorRange<AController>(GetWorld()))
+    {
+        bool bIsWinner = Controller->IsPlayerController() == bIsPlayerWinner;
+        Controller->GameHasEnded(Controller->GetPawn(), bIsWinner);
+    }
+}
+
 
 
