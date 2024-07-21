@@ -27,7 +27,7 @@ protected:
 
 private:
 	UPROPERTY(EditAnywhere)
-	class UBehaviorTree *AIBehavior;
+	class UBehaviorTree* AIBehavior;
 
 
 	

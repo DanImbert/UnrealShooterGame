@@ -17,6 +17,17 @@ void ADestroyThemAll::PawnKilled(APawn* PawnKilled)
         EndGame(false); 
     }
 
+    for (AShooterAIController* Controller : TActorRange<AShooterAIController>(GetWorld()))
+    {
+        if (!Controller->IsDead())
+        {
+            return;
+        }
+    }
+    
+    EndGame(true);
+
+
 }
 
 
