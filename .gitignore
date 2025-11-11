@@ -1,0 +1,37 @@
+# Unreal Engine build products
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# User- and platform-specific files
+.vs/
+.vscode/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.xcodeproj
+*.xcworkspace
+
+# Crash reports and logs
+*.log
+*.dmp
+Saved/Logs/
+
+# Temporary or local assets
+*.local
+*_BuiltData.uasset
+
+# Backup files
+*.orig
+*.tmp
+*.bak
+
+# FMOD generated binaries (redundant with Binaries/ but explicit for clarity)
+Plugins/FMODStudio/Binaries/
+Plugins/FMODStudio/Intermediate/
+Plugins/FMODStudioNiagara/Binaries/
+Plugins/FMODStudioNiagara/Intermediate/
