@@ -35,3 +35,16 @@ Plugins/FMODStudio/Binaries/
 Plugins/FMODStudio/Intermediate/
 Plugins/FMODStudioNiagara/Binaries/
 Plugins/FMODStudioNiagara/Intermediate/
+
+# FMOD Studio session local workspace/cache (keep the .fspro, Assets, Build, Metadata tracked)
+DanUnrealShooterFMODSession/.cache/
+DanUnrealShooterFMODSession/.user/
+DanUnrealShooterFMODSession/*.fspro.user
+DanUnrealShooterFMODSession/.unsaved/
+DanUnrealShooterFMODSession/
+
+# FMOD generated banks and baked assets stay out of git (tracked locally on disk only)
+Content/FMOD/Banks/
+Content/FMOD/Buses/
+Content/FMOD/Events/
+Content/FMOD/PrivateIntegrationData/Desktop/

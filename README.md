@@ -15,3 +15,5 @@
 - **Audio:** Using Unreal Audio Engine for sound cues
 - **UI Development:** Designing HUD, Widgets, Aiming reticles, and Health Bars
 - **UE Naming Conventions:** Following correct Unreal Engine naming conventions
+
+> **Note on audio assets:** Large FMOD banks and raw session audio are kept in local storage/external drive due to repository LFS limits. Pull requests include only config/Blueprint changes and references; grab the latest banks from the shared drive before running the project.
