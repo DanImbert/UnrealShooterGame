@@ -1,0 +1,57 @@
+# Follow the standard recommendations from the Unreal Engine source-control docs.
+# https://docs.unrealengine.com/latest/en-US/SharingAndReleasing/SourceControl/Git/
+
+# Detect text files automatically and normalize line endings.
+* text=auto
+
+# Force common script/config types to a consistent newline style.
+*.sh text eol=lf
+*.bash text eol=lf
+*.py text eol=lf
+*.cs text eol=lf
+*.Build.cs text eol=lf
+*.Target.cs text eol=lf
+*.uproject text eol=lf
+*.uplugin text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sln text eol=crlf
+*.vcxproj text eol=crlf
+*.vcxproj.filters text eol=crlf
+*.vcproj text eol=crlf
+
+# Treat binary assets (maps/assets/meshes/banks/etc.) as opaque and track via LFS.
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+*.upack filter=lfs diff=lfs merge=lfs -text
+*.ubulk filter=lfs diff=lfs merge=lfs -text
+*.utexture filter=lfs diff=lfs merge=lfs -text
+*.ufont filter=lfs diff=lfs merge=lfs -text
+*.uedata filter=lfs diff=lfs merge=lfs -text
+*.udic filter=lfs diff=lfs merge=lfs -text
+*.bank filter=lfs diff=lfs merge=lfs -text
+*.fsb filter=lfs diff=lfs merge=lfs -text
+*.wem filter=lfs diff=lfs merge=lfs -text
+*.riff filter=lfs diff=lfs merge=lfs -text
+*.caf filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.hdr filter=lfs diff=lfs merge=lfs -text
+*.bmp filter=lfs diff=lfs merge=lfs -text
+*.ico filter=lfs diff=lfs merge=lfs -text
+
+# Explicitly treat compiled binaries as binary but keep them out of LFS (ignored via .gitignore).
+*.dll binary
+*.exe binary
+*.pdb binary
+*.so binary
+
