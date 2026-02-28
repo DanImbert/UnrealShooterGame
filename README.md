@@ -10,7 +10,7 @@ Gameplay prototype developed in Unreal Engine 5.4 exploring C++ gameplay systems
 
 Gameplay-triggered audio implemented directly in C++.
 
-![Audio Trigger Code](screenshots/Screenshot 2026-02-28 203922.png)
+![Audio Trigger Code](Screenshots/Screenshot 2026-02-28 203922.png)
 
 Weapon firing and impact events trigger sound playback using Unreal Engine gameplay logic (`SpawnSoundAttached` and `PlaySoundAtLocation`), demonstrating how audio connects to runtime gameplay systems.
 
