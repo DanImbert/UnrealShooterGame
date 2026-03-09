@@ -1,19 +1,31 @@
-# UnrealShooterGame
-3rd Person Shooter in Unreal 5.4
+# UnrealShooterGame (linux-clean)
+Third-person shooter prototype in Unreal Engine 5.7 with C++ gameplay systems, Blueprint integration, and FMOD-driven audio behaviors.
 
-## Skills Used
+## Branch Context
+- `linux-clean` (this branch): FMOD-integrated gameplay/audio version.
+- `main`: C++ baseline version without FMOD-focused branch additions.
+- Baseline branch link: https://github.com/DanImbert/UnrealShooterGame/tree/main
 
-- **Version Control:** Pushing Unreal projects to Git using VSCode
-- **Systems Design:** Implementing gameplay systems in C++
-- **Integration:** Linking C++ classes with Blueprints
-- **Enhanced Input Mapping:** Creating player controls with the Input Mapping System and overriding the old control scheme
-- **Camera Programming:** Setting up various camera angles and modes
-- **Animation:** Utilizing Blueprints, Assets, Blendspaces, and State Machines
-- **Shooting Mechanics:** Implementing shooting with damage calculation, line tracing, audio, and VFX
-- **AI Functionality:** Using Nav Mesh for pathfinding, tracking the player, and developing AI behavior with Behavior Trees and Blackboard Tasks
-- **Game Modes:** Defining win and lose conditions
-- **Audio:** Using Unreal Audio Engine for sound cues
-- **UI Development:** Designing HUD, Widgets, Aiming reticles, and Health Bars
-- **UE Naming Conventions:** Following correct Unreal Engine naming conventions
+## Highlights
+- C++ player combat, damage handling, and game flow logic.
+- Low-health trigger path in C++ (`OnLowHealthTriggered`) for Blueprint/FMOD reaction hooks.
+- AI behavior setup using Behavior Trees + Blackboard.
+- Enhanced Input + character animation/locomotion pipeline.
+- HUD/widgets for gameplay feedback.
 
-> **Note on audio assets:** Large FMOD banks and raw session audio are kept in local storage/external drive due to repository LFS limits. Pull requests include only config/Blueprint changes and references; grab the latest banks from the shared drive before running the project.
+## Tech Stack
+- Unreal Engine 5.7
+- C++ + Blueprint
+- FMOD Studio integration
+- Unreal Behavior Trees / Blackboard
+- Git + GitHub
+
+## Run Notes
+1. Open `DanUnrealShooter.uproject` in UE 5.7.
+2. Generate project files and build `DanUnrealShooter` target.
+3. Launch from Unreal Editor.
+
+## Portfolio Notes
+- This branch is curated to show implementation quality and feature integration choices.
+- Large generated/binary audio assets may be excluded or referenced externally due to Git LFS budget limits.
+- If audio banks are missing locally, gameplay systems still demonstrate C++/Blueprint architecture and feature flow.
