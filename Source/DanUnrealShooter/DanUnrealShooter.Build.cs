@@ -16,6 +16,7 @@ public class DanUnrealShooter : ModuleRules
 			"InputCore",
 			"EnhancedInput",
 			"GameplayTasks",
+			"AIModule",
 			"UMG",
 			"FMODStudio"
 		});

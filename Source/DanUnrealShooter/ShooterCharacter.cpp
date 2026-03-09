@@ -85,6 +85,8 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
     PlayerInputComponent->BindAxis(TEXT("LookRight"), this, &APawn::AddControllerYawInput);
     PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
     PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &AShooterCharacter::Shoot);
+    
+    PlayerInputComponent->BindAction(TEXT("Heal"), EInputEvent::IE_Pressed, this, &AShooterCharacter::HealTest);
 }
 
 
@@ -94,8 +96,17 @@ float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 	DamageToApply = FMath::Min(Health, DamageToApply);
 	Health -= DamageToApply;
 	UE_LOG(LogTemp, Warning, TEXT("Health left %f"), Health);
+    
+   if (Health < 100.0f && !bLowHealthTriggered)
+{
+    bLowHealthTriggered = true;
 
-    if (IsDead())
+    UE_LOG(LogTemp, Warning, TEXT("LOW HEALTH TRIGGERED"));
+    OnLowHealthTriggered();
+}
+    
+
+if (IsDead())
 	{
 		AShooterGameModeBase *GameMode = GetWorld()->GetAuthGameMode<AShooterGameModeBase>();
 		if (GameMode != nullptr)
@@ -169,4 +180,22 @@ void AShooterCharacter::LookGamepad(const FInputActionValue& Value)
 void AShooterCharacter::ShootEI()
 {
     
+}
+
+void AShooterCharacter::HealTest()
+{
+    Health += 50.0f;
+
+    if (Health > MaxHealth)
+    {
+        Health = MaxHealth;
+    }
+
+    UE_LOG(LogTemp, Warning, TEXT("Healed. Health now %f"), Health);
+
+     if (Health >= 100.0f && bLowHealthTriggered)
+    {
+        bLowHealthTriggered = false;
+        OnLowHealthCleared();
+    }
 }

@@ -7,6 +7,8 @@ Saved/
 # User- and platform-specific files
 .vs/
 .vscode/
+.idea/
+.ignore
 *.sln
 *.suo
 *.opensdf

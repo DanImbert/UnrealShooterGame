@@ -25,6 +25,7 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const &DamageEvent, class AController *EventInstigator, AActor *DamageCauser) override;
 
 
+
 	// Enhanced Input
 	UPROPERTY(EditAnywhere, Category = "Input")
 	UInputMappingContext* InputMappingContext;
@@ -65,6 +66,15 @@ public:
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
 
+	UFUNCTION(BlueprintImplementableEvent)
+    void OnLowHealthTriggered();
+
+	UFUNCTION(BlueprintImplementableEvent)
+    void OnLowHealthCleared();
+
+	UFUNCTION(BlueprintCallable)
+    void HealTest();
+
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -97,5 +107,7 @@ private:
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void LookGamepad(const FInputActionValue& Value);
+
+	bool bLowHealthTriggered = false;
 	
 };
