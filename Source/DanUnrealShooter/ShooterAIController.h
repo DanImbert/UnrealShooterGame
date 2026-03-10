@@ -17,6 +17,7 @@ class DANUNREALSHOOTER_API AShooterAIController : public AAIController
 
 public:
 	virtual void Tick(float DeltaSeconds) override;
+	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 	bool IsDead() const;
 
 	

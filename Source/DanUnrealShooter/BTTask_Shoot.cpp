@@ -4,6 +4,7 @@
 #include "BTTask_Shoot.h"
 #include "AIController.h"
 #include "ShooterCharacter.h"
+#include "Kismet/GameplayStatics.h"
 
 UBTTask_Shoot::UBTTask_Shoot() 
 {
@@ -20,7 +21,14 @@ EBTNodeResult::Type UBTTask_Shoot::ExecuteTask(UBehaviorTreeComponent &OwnerComp
     }
 
     AShooterCharacter* Character = Cast<AShooterCharacter>(OwnerComp.GetAIOwner()->GetPawn());
-    if (Character == nullptr)
+    if (Character == nullptr || Character->IsDead())
+    {
+        return EBTNodeResult::Failed;
+    }
+
+    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(Character->GetWorld(), 0);
+    AShooterCharacter* PlayerCharacter = Cast<AShooterCharacter>(PlayerPawn);
+    if (PlayerCharacter != nullptr && PlayerCharacter->IsDead())
     {
         return EBTNodeResult::Failed;
     }

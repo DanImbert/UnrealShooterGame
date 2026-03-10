@@ -4,6 +4,7 @@
 #include "ShooterAIController.h"
 #include "Kismet/GameplayStatics.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "BrainComponent.h"
 #include "ShooterCharacter.h"
 
 
@@ -43,6 +44,25 @@ bool AShooterAIController::IsDead() const
     }
 
     return true;
+}
+
+void AShooterAIController::GameHasEnded(class AActor* EndGameFocus, bool bIsWinner)
+{
+    Super::GameHasEnded(EndGameFocus, bIsWinner);
+
+    if (UBrainComponent* BrainComp = GetBrainComponent())
+    {
+        BrainComp->StopLogic(TEXT("Game has ended"));
+    }
+
+    StopMovement();
+
+    if (APawn* ControlledPawn = GetPawn())
+    {
+        ControlledPawn->TurnOff();
+    }
+
+    SetActorTickEnabled(false);
 }
 
 

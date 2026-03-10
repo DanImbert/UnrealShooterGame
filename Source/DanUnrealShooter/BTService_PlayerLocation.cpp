@@ -5,6 +5,7 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/Pawn.h"
+#include "ShooterCharacter.h"
 
 
 UBTService_PlayerLocation::UBTService_PlayerLocation()
@@ -19,6 +20,14 @@ void UBTService_PlayerLocation::TickNode(UBehaviorTreeComponent &OwnerComp, uint
     APawn *PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     if (PlayerPawn == nullptr)
     {
+        OwnerComp.GetBlackboardComponent()->ClearValue(GetSelectedBlackboardKey());
+        return;
+    }
+
+    AShooterCharacter* PlayerCharacter = Cast<AShooterCharacter>(PlayerPawn);
+    if (PlayerCharacter != nullptr && PlayerCharacter->IsDead())
+    {
+        OwnerComp.GetBlackboardComponent()->ClearValue(GetSelectedBlackboardKey());
         return;
     }
 
