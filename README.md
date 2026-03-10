@@ -1,6 +1,12 @@
 # UnrealShooterGame (linux-clean)
 Third-person shooter prototype in Unreal Engine 5.7 with C++ gameplay systems, Blueprint integration, and FMOD-driven audio behaviors.
 
+## Demo
+
+[![Gameplay Audio Systems Demo](https://img.youtube.com/vi/z8qaRSRHF6U/0.jpg)](https://youtu.be/z8qaRSRHF6U)
+
+Gameplay-driven audio systems including surface-based footsteps, weapon audio, and a dynamic low-health heartbeat + music ducking system implemented using Unreal Engine 5.7, C++, Blueprint, and FMOD.
+
 ## Branch Context
 - `linux-clean` (this branch): FMOD-integrated gameplay/audio version.
 - `main`: C++ baseline version without FMOD-focused branch additions.
